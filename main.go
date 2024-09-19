@@ -49,9 +49,6 @@ func staticFileHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	// Serve static files from the "static" directory
-	// fs := http.FileServer(http.Dir("static"))
-	// http.Handle("/static/", http.StripPrefix("/static/", fs))
 
 	http.HandleFunc("/static/", staticFileHandler)
 
