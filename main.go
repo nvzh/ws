@@ -17,8 +17,8 @@ var templatesFS embed.FS
 var staticFS embed.FS
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
-	//tpl, err := template.ParseFiles("templates/home.html")
-	tpl, err := template.ParseFS(templatesFS, "templates/home.html")
+	//tpl, err := template.ParseFS(templatesFS, "templates/home.html")
+	tpl, err := template.ParseFS(templatesFS, "templates/index.html")
 
 	if err != nil {
 		http.Error(w, "Could not load template", http.StatusInternalServerError)
